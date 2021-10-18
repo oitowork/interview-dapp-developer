@@ -23,4 +23,3 @@ Escolha sua area abaixo, faça um pequeno desafio e nós envia sua pretenção s
 
 <!-- issueTable -->
 
-<!-- issueTable -->

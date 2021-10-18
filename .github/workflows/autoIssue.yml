@@ -1,13 +1,21 @@
-- name: Auto Issue List in README
-  uses: seed-of-apricot/issue-list-readme@v1.1.0
-
-steps:
-  - name: checkout
-    uses: actions/checkout@v2
-  - name: rewriteReadme
-    uses: seed-of-apricot/issue-list-readme@v1.1.0
-    with:
-      GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-      pattern: '<!-- issueTable -->' # suffixing "Demo" for this readme
-      labels: 'challenge'
-      state: 'open'
+name: "update challenges"
+on:
+  issues:
+    types: [labeled, unlabeled]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: rewriteReadme
+        uses: seed-of-apricot/issue-list-readme@v1.1.0
+        with:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          pattern: '<!-- issueTable -->' # suffixing "Demo" for this readme
+          labels: 'challenge'
+          state: 'open'
+      - name: push
+          uses: ad-m/github-push-action@main
+          with:
+            GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
