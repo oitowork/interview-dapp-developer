@@ -1,7 +1,8 @@
-name: "update challenges"
+name: "rewriteReadme"
 on:
   issues:
     types: [labeled, unlabeled]
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -9,13 +10,19 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: rewriteReadme
-        uses: seed-of-apricot/issue-list-readme@v1.1.0
+        uses: seed-of-apricot/issue-list-readme@master
         with:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-          pattern: '<!-- issueTable -->' # suffixing "Demo" for this readme
-          labels: 'challenge'
-          state: 'open'
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          pattern: "<!-- issueChallenge -->"
+          labels: "good first issue"
+          state: "open"
+      - name: add-and-commit
+        uses: EndBug/add-and-commit@v4
+        with:
+          message: README.md has been re-written
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: push
-          uses: ad-m/github-push-action@main
-          with:
-            GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

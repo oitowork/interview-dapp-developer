@@ -1,7 +1,7 @@
 
 # We are hiring | Oito.work  
 
-## Desafios FrontEnd 
+## Desafios Design
 
 
 ### Quem Somos 
@@ -19,7 +19,8 @@ Escolha sua area abaixo, faça um pequeno desafio e nós envia sua pretenção s
 - [Dapp Developer](https://github.com/oitowork/interview-dapp-developer)
 - [Blockchain Developer](https://github.com/oitowork/interview-solidity-developer)
 
-## Challenges Dapp Developer
+## Challenges Creative
 
-<!-- issueTable -->
+
+<!-- issueChallenge -->
 
