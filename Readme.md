@@ -1,12 +1,12 @@
 
 # We are hiring | Oito.work  
 
-## Desafios Design
+## Desafios Blockchain Developer
 
 
 ### Quem Somos 
 
-    Software House especializada em construir aplicações blockchain e dinheiro programavel.
+Software House especializada em construir aplicações blockchain e dinheiro programavel.
 
 ### Como Ser Contratado?
 
@@ -19,8 +19,9 @@ Escolha sua area abaixo, faça um pequeno desafio e nós envia sua pretenção s
 - [Dapp Developer](https://github.com/oitowork/interview-dapp-developer)
 - [Blockchain Developer](https://github.com/oitowork/interview-solidity-developer)
 
-## Challenges Creative
+## Challenges Blockchain
 
+[issues](https://github.com/oitowork/interview-solidity-developer/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 
 <!-- issueChallenge -->
 
